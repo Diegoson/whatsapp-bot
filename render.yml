@@ -1,9 +1,12 @@
 services:
   - type: web
     name: xastral-bot
-    env: node
-    buildCommand: npm install
-    startCommand: node index.js
+    repo: https://github.com/Diegoson/whatsapp-bot.git
+    branch: main
+    env: docker
+    dockerfilePath: /media/Dockerfile
+    plan: free
+    autoDeploy: true
     envVars:
       - key: SESSION_ID
         sync: false
