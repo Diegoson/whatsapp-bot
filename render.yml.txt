@@ -1,0 +1,28 @@
+
+services:
+  - type: web
+    name: xastral-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: SESSION_ID
+        sync: false
+      - key: PREFIX
+        sync: false
+      - key: LANG
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: GROK_API
+        sync: false
+      - key: XP_SYSTEM
+        sync: false
+      - key: OWNER_NUM
+        sync: false
+      - key: MODS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WORKTYPE
+        sync: false
